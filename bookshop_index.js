@@ -29,7 +29,7 @@ class Media {
             this._isCheckedOut = newState;
         }
         else {
-            return "You must reply with either true of false";
+            return "You must respond with either true of false";
         }
     }
 
