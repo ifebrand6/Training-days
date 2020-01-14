@@ -1,8 +1,8 @@
 class Media {
-    constructor(name){
+    constructor(title,isCheckedOut,ratings){
         _title: '';
         _isCheckedOut: false;
-        _ratings: [];
+        _ratings: 0;
     }
     get title(){
        return this._title;
@@ -39,9 +39,34 @@ class Media {
 
 }
 class Book extends Media {
-    constructor(name){
-        author: '';
-        pages: 0;
+    constructor(author,pages){
+        _author: '';
+        _pages: 0;
     }
+    get author(){
+        return this._author;
+    }
+    get pages(){
+        return this._pages;
+    }
+}
 
+class Cd extends Media{
+    constructor(director,runTime){
+        _director: '';
+        _runTime: 0;
+    }
+    get director(){
+        return this._director;
+    }
+    get runTime(){
+        return this._runTime;
+    }
+}
+
+class Movie extends Media{
+    constructor(artist,songs){
+        _artist: '';
+        _songs: [];
+    }
 }
