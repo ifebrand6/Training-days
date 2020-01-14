@@ -1,0 +1,24 @@
+a program
+an app for keepiing the index of MEDIA in the library.
+there are 3 kinds of MEDIA found here;
+BOOKS- author title pages isCheckout ratings...
+.getAverageRating(), .toggleCheckOutStatus(), and 
+.addRating()
+CD director title runTime isCheckedOut ratings 
+Methods: .getAverageRating(), .toggleCheckOutStatus(), 
+and .addRating()
+MOVIE  artist title isCheckedOut ratings songs
+.getAverageRating(), .toggleCheckOutStatus(),
+ and .addRating()
+
+similair properties-
+title, isCheckedOut ratings    
+similair Methods-
+all
+define Methods
+getAverageRating - get the average of all rating for a MEDIA
+change the value of isCheckedOut to T || F
+rate either 5 4 3 2 1 star 
+
+
+
