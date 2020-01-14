@@ -7,14 +7,14 @@ for (let k = 0; k < vowels.length; k++)
     if (input[i] === vowels[k]){
     resultArray.push(input[i]);
         if (input[i] === 'e'){
-        resultArray.push(input[i] + 'e')
+        resultArray.push(input[i] + 'e')n
      }; 
         if (input[i] === 'u'){
         resultArray.push(input[i] + 'u')
      };
     }
 };
-console.log(resultArray.join('').toUpperCase());
+// console.log(resultArray.join('').toUpperCase());
 
 
 // let input = "is";

@@ -16,20 +16,24 @@ class Media {
     set title(input){
         this._title = name;
     }
-    
-    set ratings(input){
-        this._ratings = input;
-    }
     getAverageRating(){
         Math.floor(this.ratings / 2);
         // collect (sum of ratings / n of rating)
     }
     toggleCheckoutStatus(newState){
         if (newState === (true || false)){
-            this._isCheckedOut = newState;
+            this._isCheckedOut.push(newState);
         }
         else {
             return "You must respond with either true of false";
+        }
+    }
+    addRating(input){
+        if (input <= 5){
+            this._ratings.push(input);
+        }
+        else {
+            return `${input} is exceed the rating range`;
         }
     }
 
