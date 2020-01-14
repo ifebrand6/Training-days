@@ -53,6 +53,7 @@ class Book extends Media {
 
 class Cd extends Media{
     constructor(director,runTime){
+        super(title,isCheckedOut,ratings)
         _director: '';
         _runTime: 0;
     }
@@ -66,6 +67,7 @@ class Cd extends Media{
 
 class Movie extends Media{
     constructor(artist,songs){
+        super(title,isCheckedOut,ratings)
         _artist: '';
         _songs: [];
     }
