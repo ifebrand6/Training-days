@@ -1,47 +1,43 @@
+const newLocal = false;
 class Media {
-    constructor(title,isCheckedOut,ratings){
-        _title: '';
-        _isCheckedOut: false;
-        _ratings: 0;
+    constructor(title){
+        this.title = title;
+        this._isCheckedOut = false;
+        this._ratings =  [];
     }
-    get title(){
-       return this._title;
-    }
+  
     get isCheckedOut(){
        return this._isCheckedOut;
     }
     get ratings(){
         return this._ratings;
     }
-    set title(input){
-        this._title = name;
+    
+    set isCheckedOut(input){
+        this._isCheckedOut = input;
     }
+
     getAverageRating(){
-        Math.floor(this.ratings / 2);
-        // collect (sum of ratings / n of rating)
-    }
+        let ratingSum = this.ratings.reduce((accumulator, rating) => accumulator + rating);
+    return ratingSum / this.ratings.length}
     toggleCheckoutStatus(newState){
-        if (newState === (true || false)){
-            this._isCheckedOut.push(newState);
-        }
-        else {
-            return "You must respond with either true of false";
-        }
+       this.isCheckedOut = !this.isCheckedOut.push(newState);
     }
     addRating(input){
         if (input <= 5){
-            this._ratings.push(input);
+            this.ratings.push(input);
         }
         else {
-            return `${input} is exceed the rating range`;
+            console.log(`${input}  exceed the rating range`);
         }
     }
 
 }
 class Book extends Media {
-    constructor(author,pages){
-        _author: '';
-        _pages: 0;
+    constructor(title,author,pages){
+        super(title);
+        this._author = author;
+        this._pages = pages;
     }
     get author(){
         return this._author;
@@ -49,13 +45,19 @@ class Book extends Media {
     get pages(){
         return this._pages;
     }
+    set author(input){
+        this._author.push(input);
+    }
+    set pages(input){
+        this._pages.push(input);
+    }
 }
 
-class Cd extends Media{
-    constructor(director,runTime){
-        super(title,isCheckedOut,ratings)
-        _director: '';
-        _runTime: 0;
+class Cd extends Media {
+    constructor(title,director,runTime){
+        super(title)
+        this._director = director;
+        this._runTime = runTime;
     }
     get director(){
         return this._director;
@@ -63,12 +65,43 @@ class Cd extends Media{
     get runTime(){
         return this._runTime;
     }
-}
-
-class Movie extends Media{
-    constructor(artist,songs){
-        super(title,isCheckedOut,ratings)
-        _artist: '';
-        _songs: [];
+    set director(input){
+        this.director.push(input);
+    }
+    set runTime(input){
+        this.director.push(input);
     }
 }
+
+class Movie extends Media {
+    constructor(title,artist,songs){
+      super(title);
+        this._artist = artist;
+        this._songs = songs;
+    }
+    get artist(){
+        return this._artist;
+    }
+    get  songs(){
+        return this._songs;
+    }
+    set artist(input){
+        this._artist.push(input);
+    }
+    set songs(input){
+        this._songs.push(input)
+    }
+}
+
+let firstBook = new Book('Try harder','Ifechukwu','10')
+firstBook.addRating(2)
+
+firstBook.addRating(1);
+firstBook.addRating(2);
+firstBook.addRating(1);
+firstBook.addRating(5);
+
+firstBook.getAverageRating
+
+console.log(firstBook.getAverageRating())
+
