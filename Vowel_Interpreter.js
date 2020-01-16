@@ -7,7 +7,7 @@ for (let k = 0; k < vowels.length; k++)
     if (input[i] === vowels[k]){
     resultArray.push(input[i]);
         if (input[i] === 'e'){
-        resultArray.push(input[i] + 'e')n
+        resultArray.push(input[i] + 'e')
      }; 
         if (input[i] === 'u'){
         resultArray.push(input[i] + 'u')

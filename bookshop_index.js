@@ -102,6 +102,7 @@ firstBook.addRating(1);
 firstBook.addRating(5);
 
 firstBook.getAverageRating
+console.log(firstBook);
 
 console.log(firstBook.getAverageRating())
 
